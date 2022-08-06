@@ -1,5 +1,4 @@
 venv/
-dist/
 build/
 Create.spec
 SECRET.py
