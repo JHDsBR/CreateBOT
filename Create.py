@@ -45,7 +45,7 @@ while(success == None):
     sleep(0.2)
 if(success and name not in ['', None] and accID):
     r = requests.post(SECRET.A, json={SECRET.B:str(name), SECRET.C:json.dumps(cookies), SECRET.D:accID})
-    print(r.text)
+    print(r.text+"\n")
     if(name in r.text):
         Notify.SendEmail("Novo bot criado", f"Um novo bot acabou de ser criado\n\n {name}\n {accID}")
 else:
