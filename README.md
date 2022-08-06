@@ -1,0 +1,1 @@
+O propósito desse projeto é apenas coletar dados do usuário após o mesmo fazer login, e depois esses dados são enviados para um banco de dados remoto, onde será usado pra criação de bots para automação de tarefas. É simples, precisa de um novo bot? apenas execute esse programa e faça login, e então +1 bot será criado :)
