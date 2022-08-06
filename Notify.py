@@ -2,6 +2,23 @@ import smtplib
 from SECRET import GMAIL_FROM, GMAIL_FROM_PASSORD, GMAIL_TO
 
 
+"""
+
+    é provável que um erro irá ocorrer, então sugiro que use 
+    uma senha de app no lugar da sua senha pessoal.
+
+
+    você pode conseguir uma senha de app aqui 
+        > https://myaccount.google.com/u/4/apppasswords?rapt=AEjHL4OlplQahPUzL9OOI9Nf_TBJLQ_HnEvBtkgJQcBwxxv85a0bzCSnGnUsIzATiOzUkpim5Gteehl_lkQK3-l3jJ2K24i7ow
+
+
+    se essa opção não estiver disponível, tente ativar a 
+    autenticação de dois fatores, e tente novamente.
+
+"""
+
+
+
 def SendEmail(assunto, relatorio, _from=None, _from_password=None, _to=None):
     
     _from = _from if _from else GMAIL_FROM
