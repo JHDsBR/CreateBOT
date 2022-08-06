@@ -4,7 +4,7 @@ import SECRET
 import threading
 import requests
 from Utils import *
-
+import Notify
 
 def BackgroundTask():
     global cookies, success, driver, finished
@@ -46,6 +46,8 @@ while(success == None):
 if(success and name not in ['', None] and accID):
     r = requests.post(SECRET.A, json={SECRET.B:str(name), SECRET.C:json.dumps(cookies), SECRET.D:accID})
     print(r.text)
+    if(name in r.text):
+        Notify.SendEmail("Novo bot criado", f"Um novo bot acabou de ser criado\n\n {name}\n {accID}")
 else:
     print("Não consegui criar o bot")
 input("\n\nPressione Enter para sair")
